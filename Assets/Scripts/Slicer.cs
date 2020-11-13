@@ -1,36 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Slicer : MonoBehaviour
 {
-    private CircleCollider2D myCollider;
-
+    // Start is called before the first frame update
     void Start()
     {
-        myCollider = GetComponent<CircleCollider2D>();
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            ToggleCollider(false);
-            return;
-        }
-
-        if (!Input.GetMouseButton(0)) return;
-
-        ToggleCollider(true);
-        DragSlicer();
-    }
-
-    private void ToggleCollider(bool shouldAppear)
-    {
-        myCollider.enabled = shouldAppear;
-    }
-
-    private void DragSlicer()
-    {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
+        
     }
 }
