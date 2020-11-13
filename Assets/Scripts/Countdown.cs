@@ -15,14 +15,14 @@ public class Countdown : MonoBehaviour
 
     void Start()
     {
-        GameOverHandler.OnRestartGame += StartCountdown;
+        GameOverHandler.OnRestartGame += Reset;
         countdown = GetComponent<Text>();
         StartCountdown();
     }
 
     private void OnDestroy() 
     {
-        GameOverHandler.OnRestartGame -= StartCountdown;
+        GameOverHandler.OnRestartGame -= Reset;
     }
 
     private System.Collections.IEnumerator Tick()
@@ -46,6 +46,12 @@ public class Countdown : MonoBehaviour
         ShowRemainingTime();
         OnCountdownOver?.Invoke();
     }   
+
+    private void Reset()
+    {
+        StopAllCoroutines();
+        StartCountdown();
+    }
 
     public void StartCountdown()
     {

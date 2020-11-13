@@ -971,6 +971,10 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 459637384}
   - {fileID: 345803329}
+  - {fileID: 893734641}
+  - {fileID: 2014015090}
+  - {fileID: 2125329038}
+  - {fileID: 272705134}
   tosses:
   - {fileID: 3990170187486485590, guid: 78e76998831b8ac449b799eae68b0f4b, type: 3}
   - {fileID: 8119973725461399422, guid: badc4305764bdc24a9b8f8a973ddca9e, type: 3}
